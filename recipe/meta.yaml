@@ -50,10 +50,13 @@ test:
     - pip
     - pytest
     - scipy
+  files:
+    - test_compile.py
   source_files:
     - python/test
   commands:
     - pip check
+    - python test_compile.py
     # test suite essentially depends on availability of a physical GPU,
     # see https://github.com/openai/triton/issues/466;
     # - pytest -v python/test
